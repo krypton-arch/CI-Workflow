@@ -5,8 +5,7 @@ describe('App General Endpoints', () => {
   describe('GET /', () => {
     it('should return welcome message with status 200', async () => {
       const response = await request(app).get('/');
-      // Intentionally failing assertion to trigger CI pipeline test failure
-      expect(response.status).toBe(500);
+      expect(response.status).toBe(200);
       expect(response.headers['content-type']).toMatch(/json/);
       expect(response.body).toEqual({
         message: 'Welcome to the CI/CD Express API',
