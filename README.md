@@ -9,7 +9,8 @@ A robust, production-grade Express.js REST API with comprehensive automated test
 ```text
 ├── .github/
 │   └── workflows/
-│       └── ci.yml             # GitHub Actions CI workflow (Lint, Format, Test)
+│       ├── ci.yml             # GitHub Actions CI workflow (Automated Test Suite)
+│       └── lint.yml           # GitHub Actions workflow (ESLint & Prettier)
 ├── src/
 │   ├── app.js                 # Express application & middleware configuration
 │   ├── server.js              # Server entrypoint (listening on PORT)

@@ -1,4 +1,4 @@
-name: Continuous Integration - Quality & Test Suite
+name: Automated Test Suite
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Lint, Format Check & Automated Tests
+    name: Jest & Supertest Suite
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,11 +28,5 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Check Code Quality (ESLint)
-        run: npm run lint
-
-      - name: Check Code Formatting (Prettier)
-        run: npm run format:check
-
-      - name: Execute Automated Test Suite with Coverage (Jest & Supertest)
+      - name: Execute Automated Test Suite with Coverage
         run: npm run test:ci
