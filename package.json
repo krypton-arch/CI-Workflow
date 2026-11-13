@@ -13,7 +13,9 @@
     "lint:fix": "eslint . --fix",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "check:all": "npm run lint && npm run format:check && npm run test:ci"
+    "check:all": "npm run lint && npm run format:check && npm run test:ci",
+    "docker:build": "docker build -t cicd .",
+    "docker:run": "docker run -p 3000:3000 --init --rm cicd"
   },
   "keywords": [
     "express",

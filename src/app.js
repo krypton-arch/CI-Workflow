@@ -2,9 +2,6 @@ const express = require('express');
 const healthRoutes = require('./routes/health');
 const itemsRoutes = require('./routes/items');
 
-// Intentionally unused variable to trigger an ESLint failure in the CI Lint action
-const intentionalLintFailure = 'Trigger ESLint failure';
-
 const app = express();
 
 // Built-in body parsing middleware
